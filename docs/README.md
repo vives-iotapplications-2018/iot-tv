@@ -9,8 +9,11 @@ TODO: add description here
 ```shell
 bundle install; yarn install; rails s
 ```
-
-
+### Setup DB
+To alter you're database schema you have to enter following command:
+```shell
+rails db:migrate
+```
 ## Documentation
 
 Make sure to have Vuepress installed on your system. Then in the root project directory run the following command:
