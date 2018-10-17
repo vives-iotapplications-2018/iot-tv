@@ -16,7 +16,7 @@ rails db:migrate
 ```
 To seed the database with dummy-info:
 ```shell
-rails db:migrate
+rails db:seed
 ```
 If you want to start with a brand new database, you can drop the database with:
 ```shell
