@@ -14,6 +14,14 @@ To alter you're database schema you have to enter following command:
 ```shell
 rails db:migrate
 ```
+To seed the database with dummy-info:
+```shell
+rails db:migrate
+```
+If you want to start with a brand new database, you can drop the database with:
+```shell
+rails db:drop:_unsafe
+```
 ## Documentation
 
 Make sure to have Vuepress installed on your system. Then in the root project directory run the following command:
