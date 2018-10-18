@@ -17,8 +17,8 @@ location_list.each do |name, description|
   Location.create( name: name, description: description )
 end
 
-for i in 0..4
-    Device.create(dev_eui: "00E4F052209EE8A" + i.to_s, Location: Location.find(i))
+for i in 0..3
+    Device.create(dev_eui: "00E4F052209EE8A" + i.to_s, Location: Location.find(i + 1))
 end
 
 temperature_list = [
