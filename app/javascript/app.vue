@@ -1,25 +1,37 @@
 
 
 <template>
-  <div id="app">
-    <p>{{ message }}</p>
-  </div>
+<div>
+  <chartjs-line
+    v-bind:datasets="datasets"
+    v-bind:option="option"
+  ></chartjs-line>
+</div>
 </template>
+
 
 <script>
 export default {
-  data: function () {
+  data() {
     return {
-      message: "Hello Vue!"
-    }
+      datasets: [
+        {
+          data: [10, 50, 35, 20, 60],
+        }
+      ],
+      option: {
+        title: {
+          display: true,
+          text: "Temperature chart"
+        }
+      }
+    };
   }
-}
+};
 </script>
 
+
 <style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+
 </style>
 

@@ -36,6 +36,10 @@
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 
+import "chart.js"
+import "hchs-vue-charts"
+Vue.use(window.VueCharts);
+
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#hello',
