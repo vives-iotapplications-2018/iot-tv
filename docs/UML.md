@@ -1,6 +1,6 @@
 # UML
 
-![UML](images/UML-iot-tv.png)
+![UML](images/UML-iot-tv.PNG)
 
 ## Relations
 
