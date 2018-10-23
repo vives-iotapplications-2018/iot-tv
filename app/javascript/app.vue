@@ -1,3 +1,5 @@
+
+
 <template>
   <div id="app">
     <p>{{ message }}</p>
@@ -20,3 +22,4 @@ p {
   text-align: center;
 }
 </style>
+
