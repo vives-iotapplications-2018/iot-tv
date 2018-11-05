@@ -35,10 +35,13 @@
 
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
-
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
 import "chart.js"
 import "hchs-vue-charts"
 Vue.use(window.VueCharts);
+Vue.use(VueAxios, axios);
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
