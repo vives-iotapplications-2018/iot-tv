@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
   <chartjs-line
@@ -16,8 +14,8 @@ export default {
     return {
       datasets: [
         {
-          data: [10, 50, 35, 20, 60],
-        }
+          data: [],
+        },
       ],
       option: {
         title: {
@@ -29,7 +27,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 
