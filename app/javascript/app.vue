@@ -35,15 +35,11 @@ export default {
         var arraySize = response.data.length;    
         for(var i = 0; i < arraySize; i++){
           this.temperatures.push(response.data[i].value);
-          console.log("yo");
         }
       })
     },
 
 };
-
-
-
 
 </script>
 
