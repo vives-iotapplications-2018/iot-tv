@@ -4,16 +4,16 @@
     v-bind:datasets="datasets"
     v-bind:option="option"
   ></chartjs-line>
-
-    <div class="temp-area" v-if="temperatures">
+<!--     <div class="temp-area" v-if="temperatures">
         <h2>{{ temperatures }}</h2>
 
-      </div>
+      </div> -->
 </div>
 </template>
 
 <script>
 export default {
+
   data() {
     return {
       temperatures: [],
@@ -30,14 +30,16 @@ export default {
       }
     };
   },
-  created ()  {
+      created ()  {
       this.axios.get('http://localhost:3000/temperatures.json').then((response, error) => {
-        var arraySize = response.data.length;    
+
+        var arraySize = response.data.length; 
         for(var i = 0; i < arraySize; i++){
-          this.temperatures.push(response.data[i].value);
-        }
+          this.datasets[0].data.push(response.data[i].value);
+    }
+        
       })
-    },
+    }, 
 
 };
 
