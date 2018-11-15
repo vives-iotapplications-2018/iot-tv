@@ -3,6 +3,7 @@
   <chartjs-line
     v-bind:datasets="datasets"
     v-bind:option="option"
+    v-bind:bind="true"
   ></chartjs-line>
 <!--     <div class="temp-area" v-if="temperatures">
         <h2>{{ temperatures }}</h2>
