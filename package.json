@@ -13,6 +13,11 @@
     "vue-template-compiler": "^2.5.17"
   },
   "devDependencies": {
+    "vuepress": "^0.14.5",
     "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   }
 }
