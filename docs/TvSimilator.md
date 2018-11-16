@@ -15,3 +15,9 @@ Get inside your Base64Post and type `ruby ./ruby.rb`.
 Look in your powershell window of the Iot-TV project to see if your request was 
 succesfull or if it failed.
 That's it!
+
+## Error/Warnings
+If you get following error/warning:
+    `ActiveRecord::PendingMigrationError`
+Just run the following command:
+    `rails db:migrate RAILS_ENV=development`
