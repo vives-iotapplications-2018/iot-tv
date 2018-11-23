@@ -22,12 +22,33 @@ for i in 0..3
 end
 
 temperature_list = [
-  [ "30.2", "C", 1 ],
-  [ "16", "C", 2 ],
-  [ "-10", "C", 3 ],
-  [ "40", "C", 4 ]
+  [ "5,2", "C", 1 ],
+  [ "5", "C", 2 ],
+  [ "4,5", "C", 3 ],
+  [ "4,2", "C", 4 ],
+  [ "4.2", "C", 5 ],
+  [ "4", "C", 6 ],
+  [ "4.3", "C", 7 ],
+  [ "5.2", "C", 8 ],
+  [ "6.3", "C", 9 ],
+  [ "8.9", "C", 10 ],
+  [ "9.6", "C", 11 ],
+  [ "11.7", "C", 12 ],
+  [ "13.5", "C", 13],
+  [ "15", "C", 14 ],
+  [ "16", "C", 15 ],
+  [ "16.2", "C", 16 ],
+  [ "16.1", "C", 17 ],
+  [ "16", "C", 18 ],
+  [ "15.5", "C", 19 ],
+  [ "13.2", "C", 20 ],
+  [ "13.1", "C", 21 ],
+  [ "12.9", "C", 22 ],
+  [ "13.0", "C", 23 ],
+  [ "12.9", "C", 24 ]
 ]
 
-temperature_list.each do |value, unit, device|
-    Temperature.create( value: value, unit: unit, Device: Device.find(device) )
+temperature_list.each do |value, unit, index|
+    time = "2018-11-23T" + index.to_s + ":00:11.562Z"
+    Temperature.create( value: value, created_at: time, unit: unit, Device: Device.find(1) )
 end
