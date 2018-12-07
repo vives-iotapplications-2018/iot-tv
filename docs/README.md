@@ -2,11 +2,13 @@
 
 ## Introduction
 
-Scheme of the project:
+__Scheme of the project:__
 
 https://www.lucidchart.com/invitations/accept/8665dc71-bbc4-41dd-ba85-a4b4a371b3d0
 
+__UML Sequence diagram of the project:__
 
+https://www.lucidchart.com/documents/edit/a249a76c-6f44-4ee3-982b-c87f46bba5bb/0
 
 ## install
 Run following commands to install this project.
