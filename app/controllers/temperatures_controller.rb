@@ -29,6 +29,8 @@ class TemperaturesController < ApplicationController
 
     respond_to do |format|
       if @temperature.save
+        # POST TO STT
+        # Broadcast using websocket
         format.html { redirect_to @temperature, notice: 'Temperature was successfully created.' }
         format.json { render :show, status: :created, location: @temperature }
       else
