@@ -14,8 +14,8 @@
 </template>
 
 <script>
-export default {
 
+export default {
 
   data() {
     return {
@@ -36,7 +36,8 @@ export default {
     };
   },
       created ()  {
-        this.axios.get('http://localhost:3000/temperatures.json').then((response, error) => {
+        this.axios.get('temperatures.json').then((response, error) => {
+          console.log(response.data)
           var arraySize = response.data.length; 
           for(var i = 0; i < arraySize; i++){
             this.datasets[0].data.push(response.data[i].value);
