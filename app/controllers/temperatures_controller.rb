@@ -1,3 +1,8 @@
+require 'net/http'
+require 'uri'
+require 'json'
+
+
 class TemperaturesController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_temperature, only: [:show, :edit, :update, :destroy]
@@ -30,6 +35,29 @@ class TemperaturesController < ApplicationController
     respond_to do |format|
       if @temperature.save
         # POST TO STT
+
+        # post_uri = URI.parse(process.env.HTTP_STT_HTTP + "://" + process.env.HTTP_STT_HOST + ":" + process.env.HTTP_STT_PORT +  process.env.HTTP_STT_PATH)
+        post_uri = URI.parse("http://localhost:4567/api")
+        # puts ENV["HTTP_STT_HTTP"]
+
+        header = {'Content-Type': 'application/json'}
+        puts "_____________________________________"
+        puts @temperature.to_json.to_s
+        puts "_____________________________________"
+
+        # Create the HTTP objects
+        http = Net::HTTP.new(post_uri.host, post_uri.port)
+        request = Net::HTTP::Post.new(post_uri.request_uri, header)
+        request.body = @temperature.to_json.to_s
+        puts "created HTTP Objects"
+        
+        # Send the request
+        response = http.request(request)
+        print "inspection of request: " ,request.inspect
+        
+
+
+
         # Broadcast using websocket
         format.html { redirect_to @temperature, notice: 'Temperature was successfully created.' }
         format.json { render :show, status: :created, location: @temperature }
