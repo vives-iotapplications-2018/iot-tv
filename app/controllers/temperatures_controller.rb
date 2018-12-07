@@ -1,6 +1,8 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require 'dotenv/load'
+
 
 
 class TemperaturesController < ApplicationController
@@ -36,8 +38,9 @@ class TemperaturesController < ApplicationController
       if @temperature.save
         # POST TO STT
 
-        # post_uri = URI.parse(process.env.HTTP_STT_HTTP + "://" + process.env.HTTP_STT_HOST + ":" + process.env.HTTP_STT_PORT +  process.env.HTTP_STT_PATH)
-        post_uri = URI.parse("http://localhost:4567/api")
+        post_uri = URI.parse(ENV["HTTP_STT_HTTP"] + "://" + ENV["HTTP_STT_HOST"] + ":" + ENV["HTTP_STT_PORT"] +  ENV["HTTP_STT_PATH"])
+
+
         # puts ENV["HTTP_STT_HTTP"]
 
         header = {'Content-Type': 'application/json'}
