@@ -2,7 +2,11 @@
 
 ## Introduction
 
-TODO: add description here
+Scheme of the project:
+
+https://www.lucidchart.com/invitations/accept/8665dc71-bbc4-41dd-ba85-a4b4a371b3d0
+
+
 
 ## install
 Run following commands to install this project.
