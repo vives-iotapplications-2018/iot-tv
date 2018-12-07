@@ -7,10 +7,18 @@ TODO: add description here
 ## install
 Run following commands to install this project.
 ```shell
-bundle install; yarn; rails db:migrate; rails db:seed; rails s
+bundle install; yarn;
 ```
-
-### Setup DB
+!!! Workaround !!!
+Vue is installed with npm and will give some issues after running above commands. Untill this bug is fixed run following command:
+```shell
+npm install
+```
+## Run app
+```shell
+rails s
+```
+## Setup DB
 To alter you're database schema you have to enter following command:
 ```shell
 rails db:migrate
