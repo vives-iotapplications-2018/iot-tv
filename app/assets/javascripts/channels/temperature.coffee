@@ -7,4 +7,8 @@ App.temperature = App.cable.subscriptions.create "TemperatureChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-     $("#temperatures").prepend("<li>" + data.value + "</li>")
+    #  $("#temperatures").prepend("<li>" + data.value + "</li>")
+    
+    #document.getElementById("temperatures").innerHTML = "<li>" + data.data + "</li>" + document.getElementById("temperatures").innerHTML;
+    # console.log(document.getElementById("temperatures").lastElementChild.innerHTML)
+    document.getElementById("temperatures").innerHTML = "<li>" + data.data + "</li>";
