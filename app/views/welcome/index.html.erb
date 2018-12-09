@@ -1,5 +1,27 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+<h1>Rails ActionCable example</h1>
+
+
+<%= form_for(@temperature, url: {:controller => "temperatures", action: "temperature"}) do |f| %>
+    <%= f.label :temperature %><br />
+    <%= f.text_field :value %>
+    <%= f.label :unit %><br />
+    <%= f.text_field :unit %>
+    <%= f.label :Deviceid %><br />
+    <%= f.text_field :Device_id %>
+    <%= f.submit %>
+<% end %> 
+
+
+<ul id="messages">
+    <% @temperatures.each do |temperature| %>
+    <li><%= temperature.value %></li>
+    <% end %>
+</ul>
+
+
 <div id='hello'>
       {{message}}
       <app></app>
