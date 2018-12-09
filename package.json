@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "chart.js": "^2.7.3",
     "hchs-vue-charts": "^1.2.8",
+    "jquery": "^3.3.1",
     "vue": "^2.5.17",
     "vue-axios": "^2.1.4",
     "vue-chartjs": "^3.4.0",

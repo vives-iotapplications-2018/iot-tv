@@ -13,6 +13,7 @@ class TemperaturesController < ApplicationController
   # GET /temperatures.json
   def index
     @temperatures = Temperature.all
+    @temperatures = Temperature.all.reverse
   end
 
   # GET /temperatures/1
@@ -95,14 +96,14 @@ class TemperaturesController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_temperature
-      @temperature = Temperature.find(params[:id])
-    end
+  def temperature
+      @temperature = Temperature.create(temperature_params)
+      redirect_to root_path
+  end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def temperature_params
-      params.require(:temperature).permit(:value, :unit, :Device_id)
+      params.require(:temperature).permit(:value, :unit, :Device_id, :temperature)
     end
 end
