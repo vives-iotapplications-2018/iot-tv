@@ -55,6 +55,7 @@ export default {
     return {
       datasets: [
         {
+          label: "",
           pointBorderColor: coloR,
           pointBackgroundColor: coloR,
           data: [],
