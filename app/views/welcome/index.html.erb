@@ -1,20 +1,27 @@
-<h1>Temperatures</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">IoT TV</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        </ul>
+      </div>
+</nav>
 
 
-<h1>Rails ActionCable example</h1>
-
-<ul id="temperatures">
-
-    <li><%= @temperatures.first.value %></li>
-    <li><%= @temperatures.last.value %></li>
-    
-</ul>
-
-
-
-<h2> Device 1 <h2>
-<div id='hello'>
-      
+<div id='hello'>   
+            <h5 id="device1">Device 1</h5>
+            <p> Current temperature is:  <b><%= @temperatures.first.value %></b></p>
       <app></app>
 </div>
+
+<style>
+#device1 {
+      text-align: center;
+}
+#hello {
+    width: 1500px;
+
+}
+</style>
