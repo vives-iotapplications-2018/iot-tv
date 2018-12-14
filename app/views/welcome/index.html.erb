@@ -12,7 +12,12 @@
 
 <div id='hello'>   
             <h5 id="device1">Device 1</h5>
-            <p> Current temperature is:  <b><%= @temperatures.first.value %></b></p>
+            <p> Current temperature is:</p>
+      <ul id="temperatures">
+
+    <li><%= @temperatures.first.value %></li>
+    
+</ul>
       <app></app>
 </div>
 
