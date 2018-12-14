@@ -32,6 +32,7 @@ export default {
       .then((response, error) => {
         var arraySize = response.data.length;
         for (var i = 0; i < arraySize; i++) {
+          if(response.data[i].Device_id == 1){
           this.datasets[0].data.push(response.data[i].value);
           if (response.data[i].value > 20) {
             coloR.push(warmTemp());
@@ -47,6 +48,7 @@ export default {
           var time = fulldate.substr(14, 23);
           var partTime = time.substr(0, 9);
           this.labels.push(partTime);
+          }
         }
       });
   },
