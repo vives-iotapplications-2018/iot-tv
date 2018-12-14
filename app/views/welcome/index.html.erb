@@ -1,31 +1,69 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">IoT TV</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#" class="brand-logo">IoT TV</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-        </ul>
+            </ul>
       </div>
 </nav>
 
-
-<div id='hello'>   
-            <h5 id="device1">Device 1</h5>
-            <p> Current temperature is:</p>
-      <ul id="temperatures">
-
-    <li><%= @temperatures.first.value %></li>
-    
-</ul>
-      <app></app>
+<div class="row">
+      <h5 id="device">Device 1</h5>
+      <div class="col s7 push-s2">
+                  <div id='hello'>
+                        <app></app>
+                  </div>
+      </div>
+      <div class="col s2 pull-s7" id="testdiv">
+            <div id="testdiv2">
+                  <p id="testp"> Current temperature is:<p>
+                  <ul id="temperatures">
+                              <p id="currentTemp"><b><%= @temperatures.first.value %> °C</b></p>
+                  </ul>
+            </div>
+      </div>
 </div>
+<div class="row">
+            <h5 id="device">Device 2</h5>
+            <div class="col s7 push-s2">
+                        <div id='hello2'>
+                              <device2></device2>  
+                        </div>
+            </div>
+            <div class="col s2 pull-s7" id="testdiv">
+                  <div id="testdiv2">
+                              <ul id="temperatures">
+                                    <p id="testp"> Current temperature is:<p>
+                              </ul> 
+                        <p id="currentTemp"><b><%= @temperatures.first.value %> °C</b></p>
+                  </div>
+            </div>
+      </div>
 
 <style>
-#device1 {
+#testdiv {
+      display: table;
+      text-align: center;
+      height: 700px;
+}
+#testdiv2 {
+      display: table-cell;
+      vertical-align: middle;
+}
+#currentTemp{
+      font-size: 30px;
+}
+
+#device {
       text-align: center;
 }
 #hello {
+    width: 1500px;
+
+}
+#hello2 {
     width: 1500px;
 
 }

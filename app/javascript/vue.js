@@ -6,4 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
             message: 'Vue, what else!'
         }
     })
+    const device2 = new Vue({
+        el:'#device2',
+        data: {
+            message: 'Vue, what else!'
+        }
+    })
 })

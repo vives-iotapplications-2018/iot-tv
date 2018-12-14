@@ -35,6 +35,7 @@
 
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
+import Device2 from '../device2.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
  
@@ -50,6 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
       message: "Can you say hello?"
     },
     components: { App }
+  })
+  const device2 = new Vue({
+    el: '#hello2',
+    data: {
+      message: "Can you say hello?"
+    },
+    components: { Device2 }
   })
 })
 //
